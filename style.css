@@ -1,27 +1,86 @@
-body {
-    width: 100%;
+* {
     font-family: monospace;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.side-bars {
+    background-color: darkblue;
+    width: auto;
+    height: max(100vh, auto); /* pick bigger value to make it work with scrolling. EDIT: this solution doesn't work (invalid property value warning in DevTools). Flexbox is probably what would work but I don't know it yet. */
+}
+
+.backdrop {
+    /* box-sizing: border-box; */
     color: darkblue;
     background-color: beige;
+    width: min(600px, 100vw);
+    height: max(100vh, auto);
+    margin: auto;
+    padding: 8px;
 }
 
 img {
-    display: block;
-    width: 400px;
+    width: 200px;
     height: auto;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0;
+}
+
+.title-bar {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.main-logo {
+    display: inline-block;
+    height: 64px;
+    width: auto;
+    vertical-align: middle;
+}
+
+.main.page.title {
+    display: inline-block;
+    vertical-align: middle;
 }
 
 a {
     color: red;
+    text-decoration: none;
 }
 
-#container {
-    width: 600px;
-    margin: 0 auto;
+.home-list {
+    text-align: center;
+    padding: 0;
+    margin: 0;
 }
 
-.section {
-    line-height: 1.5;
+.home-list li {
+    display: inline-block;
+    background-color: darkblue;
+    padding: 8px 0;
+}
+
+.home-list li a {
+    color: white;
+    padding: 8px;
+}
+
+.recipe-image {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.section.description {
+    display: inline-block;
+    width: 380px;
+    margin: 0 0 0 10px;
+    vertical-align: middle;
+}
+
+.description.title {
+    margin-left: 0px;
 }
