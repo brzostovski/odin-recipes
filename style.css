@@ -2,23 +2,29 @@
     font-family: monospace;
 }
 
+html,
+body {
+    height: 100%;
+}
+
 body {
     margin: 0;
     padding: 0;
+    display: flex;
 }
 
-.side-bars {
+.side-bar {
     background-color: darkblue;
-    width: auto;
-    height: max(100vh, auto); /* pick bigger value to make it work with scrolling. EDIT: this solution doesn't work (invalid property value warning in DevTools). Flexbox is probably what would work but I don't know it yet. */
+    flex: 0 1 400px;
 }
 
 .backdrop {
     /* box-sizing: border-box; */
     color: darkblue;
     background-color: beige;
+    height: 100%;
     width: min(600px, 100vw);
-    height: max(100vh, auto);
+    flex: 1 0 600px;
     margin: auto;
     padding: 8px;
 }
